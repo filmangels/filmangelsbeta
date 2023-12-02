@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Film Angels: funding film the Silicon Valley way (since 2005)</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.ico?v=9">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url("motto.png"), url("logomark.png"), url("hollywood.jpg");
+  background-position: 64.85% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: Georgia, Garamond, serif;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+  font-size: 1rem;
+}
+
+.logotype {
+  position: absolute;
+  top: 5vmin;
+  left: 5vmin;
+  width: 30vmin;
+}
+
+.menu {
+  position: absolute;
+  top: 5vmin;
+  left: calc(5vmin + 30vmin + 20px); /* Increased space by adding 20px padding */
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  gap: 10px; /* This adds space between the menu items themselves */
+}
+
+.contact {
+  position: absolute;
+  bottom: 16px;
+  right: 32px;
+}
+
+.menu a {
+  color: white; /* Change the color to fit your design */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  padding: 10px;
+  border-radius: 5px;
+  white-space: nowrap; /* Ensure the text doesn't wrap */
+}
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.5); /* Change background on hover */
+  color: black; /* Change text color on hover */
+}
+
+/* Styles for mobile screens */
+@media (max-width: 600px) { /* Adjust the max-width as needed for your target mobile screen size */
+  .logotype {
+    width: 20vmin; /* Smaller logo for mobile */
+  }
+
+  .menu {
+    top: 5vmin;
+    left: calc(5vmin + 20vmin + 10px); /* Adjust space next to the smaller logo */
+    gap: 5px; /* Smaller gap between menu items */
+  }
+
+  .menu a {
+    padding: 5px; /* Smaller padding for mobile */
+    font-size: 0.8rem; /* Smaller font size for mobile */
+  }
+
+  .contact {
+    bottom: 8px;
+    right: 16px;
+    font-size: 0.8rem; /* Smaller font size for mobile */
+  }
+}
+
+</style>
+</head>
+<body>
+
+<a title="logo" href="/">
+  <img class="logotype" src="logotype.png" alt="Film Angels">
+</a>
+
+<div class="menu">
+  <a href="/about.pdf">About</a>
+  <a href="https://lnv3b3e07gy.typeform.com/to/kE8myxBl?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&utm_term=xxxxx&utm_content=xxxxx">Pitch Your Production</a>
+</div>
+
+<div class="contact">
+  <a title="contact us" href="mailto:hello@filmangels.com">hello@filmangels.com</a>
+</div>
+
+</body>
