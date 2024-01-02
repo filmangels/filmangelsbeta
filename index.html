@@ -1,106 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>Film Angels: funding film the Silicon Valley way (since 2005)</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<link rel="icon" href="favicon.ico?v=9">
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  background-image: url("motto.png"), url("logomark.png"), url("hollywood.jpg");
-  background-position: 64.85% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  font-family: Georgia, Garamond, serif;
-}
-
-a {
-  text-decoration: none;
-  color: gray;
-  font-size: 1rem;
-}
-
-.logotype {
-  position: absolute;
-  top: 5vmin;
-  left: 5vmin;
-  width: 30vmin;
-}
-
-.menu {
-  position: absolute;
-  top: 5vmin;
-  left: calc(5vmin + 30vmin + 20px); /* Increased space by adding 20px padding */
-  display: flex;
-  flex-direction: row; /* Align items horizontally */
-  gap: 10px; /* This adds space between the menu items themselves */
-}
-
-.contact {
-  position: absolute;
-  bottom: 16px;
-  right: 32px;
-}
-
-.menu a {
-  color: white; /* Change the color to fit your design */
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  padding: 10px;
-  border-radius: 5px;
-  white-space: nowrap; /* Ensure the text doesn't wrap */
-}
-
-.menu a:hover {
-  background: rgba(255, 255, 255, 0.5); /* Change background on hover */
-  color: black; /* Change text color on hover */
-}
-
-/* Styles for mobile screens */
-@media (max-width: 600px) { /* Adjust the max-width as needed for your target mobile screen size */
-  .logotype {
-    width: 20vmin; /* Smaller logo for mobile */
-  }
-
-  .menu {
-    top: 5vmin;
-    left: calc(5vmin + 20vmin + 10px); /* Adjust space next to the smaller logo */
-    gap: 5px; /* Smaller gap between menu items */
-  }
-
-  .menu a {
-    padding: 5px; /* Smaller padding for mobile */
-    font-size: 0.8rem; /* Smaller font size for mobile */
-  }
-
-  .contact {
-    bottom: 8px;
-    right: 16px;
-    font-size: 0.8rem; /* Smaller font size for mobile */
-  }
-}
-
-</style>
-</head>
-<body>
-
-<a title="logo" href="/">
-  <img class="logotype" src="logotype.png" alt="Film Angels">
-</a>
-
-<div class="menu">
-  <a href="/about.pdf">About</a>
-  <a href="https://lnv3b3e07gy.typeform.com/to/kE8myxBl?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&utm_term=xxxxx&utm_content=xxxxx">Pitch Your Production</a>
-</div>
-
-<div class="contact">
-  <a title="contact us" href="mailto:hello@filmangels.com">hello@filmangels.com</a>
-</div>
-
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Film Angels is the world's leading angel investor group for film and film-related ventures" />
+        <meta name="author" content="Film Angels" />
+        <!-- https://blog.hubspot.com/marketing/meta-tags -->
+        <!-- <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" /> -->
+        <meta name="robots" content="noindex, nofollow" />
+        <title>Film Angels: funding film the Silicon Valley way (since 2005)</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/disclosure.css" rel="stylesheet" />
+        <style>
+            /* https://stackoverflow.com/questions/1575141/how-to-make-a-div-100-height-of-the-browser-window */
+            body > header, header.masthead {
+                height: 100%;
+                min-height: 100vh;
+            }
+            header.masthead {
+                background-image: url("assets/img/motto.png"), url("assets/img/logomark.png"), url("assets/img/hollywood.jpg");
+                background-position: 64.85% 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            ._logotype {
+                position: absolute;
+                top: 0.75rem;
+                width: 5.3rem;
+            }
+            /* https://www.w3docs.com/snippets/css/how-to-align-the-content-of-a-div-to-the-bottom.html */
+            #_bottom {
+                position: absolute;
+                bottom: 0;
+            }
+            ._alternate {
+                background-color: var(--bs-gray-dark);
+            }
+            section {
+                color: rgba(255, 255, 255, 0.75);
+            }
+            section h2, section:hover {
+                color: rgba(255, 255, 255, 0.95);
+            }
+            section a {
+                outline-color: transparent;
+                background-color: transparent;
+                text-underline-offset: 0.15em;
+            }
+            section a:link {
+                color: inherit;
+            }
+            /* needs work */
+            section a:visited {
+                color: rgba(255, 255, 255, 0.55);
+            }
+            /* needs work */
+            section:hover a:visited {
+                color: rgba(255, 255, 255, 0.65);
+            }
+            section a:focus {
+                text-decoration: none;
+            }
+            section a:hover {
+                /* text-decoration: underline; */
+            }			
+            section a:active {
+                color: #ffd700;
+            }
+            @font-face {
+                font-family: 'Hinge Font Familt Regular';
+                font-style: normal;
+                font-weight: normal;
+                src: local('Hinge Font Familt Regular'), url('assets/font/Hinge.woff') format('woff');
+            }
+            ._hinge {
+                font-family:'Hinge Font Familt Regular';
+                letter-spacing: 0.03em;
+                word-spacing: -0.15em;
+            }
+            ._hinge span {
+                color: #ffd700;
+            }
+            ._hinge ._f-fix {
+                letter-spacing: -0.09em;
+                color: inherit;
+            }
+            /* https://stackoverflow.com/questions/27583937/how-can-i-make-a-css-glass-blur-effect-work-for-an-overlay */
+            nav {
+                backdrop-filter: blur(1px);
+            }
+            /* https://stackoverflow.com/questions/6868009/html-anchor-disable-style */
+            a._no-style:link, a._no-style:visited {
+                text-decoration: inherit;
+                color: inherit;
+                cursor: auto;
+                /* outline: 0; */
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container px-5">
+                <!-- to do: https://stackoverflow.com/questions/14730484/add-a-link-to-an-image-in-a-css-style-sheet -->
+                <a class="navbar-brand" href="#page-top"><img class="_logotype" src="assets/img/logotype.png" alt="Film Angels" title="Film Angels"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#_about" title="About Film Angels">About</a></li>
+                        <!-- 
+                        <li class="nav-item"><a class="nav-link" href="#_investors" title="Film Angels for investors">Investors</a></li>
+                        -->
+                        <li class="nav-item"><a class="nav-link" href="#_partners" title="Film Angels partners and sponsors">Partners</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#_producers" title="Film Angels for producers">Producers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mailto:hello@filmangels.com" title="Contact Film Angels by email">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="masthead text-center text-white">
+            <div class="masthead-content" id="_bottom">
+                <div class="container px-5">
+                    <!-- https://stackoverflow.com/questions/3239202/whats-the-correct-way-to-hide-the-h1-tag-and-not-be-banned-from-google -->
+                    <!-- 
+                    <h1 class="masthead-heading mb-0">Film Angels</h1>
+                    <h2 class="masthead-subheading mb-0">Funding film the Silicon Valley way</h2>
+                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Learn More</a>
+                    -->
+                </div>
+            </div>
+            <!-- 
+            <div class="bg-circle-1 bg-circle"></div>
+            <div class="bg-circle-2 bg-circle"></div>
+            <div class="bg-circle-3 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div>
+            -->
+        </header>
+        <!-- Content topic 1-->
+        <article id="_about" title="About">
+            <header id="scroll">
+                <!-- 
+                <h1>About Film Angels</h1>
+                -->
+            </header>
+            <!-- Content section 1-->
+            <section id="_premier" title="" data-title="Angel group for film">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6 order-lg-2">
+                            <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/01.jpg" alt="Green Book poster" title="2019 Best Picture Oscar winner &quot;Green Book&quot; overcomes long odds" /></div>
+                        </div>
+                        <div class="col-lg-6 order-lg-1">
+                            <div class="p-5">
+                                <h2 class="display-6 _hinge" title="World's premier angel group for film"><a class="_no-style" href="#_premier">World's premier <span>angel group <span class="_f-fix">f</span>or film</span></a></h2>
+                                <p class="_disclosable">Film Angels is the world's <details><summary title="and foremost">first</summary><span> and foremost</span></details> profes&shy;sional angel investor organi&shy;zation dedicated to funding independent film <span><details><summary title="and film-related startup companies">projects</summary><span> and film-related startup companies</span></details>.</span> We routinely <details><summary title="the most promising new">connect</summary><span> the most promising new</span></details> movie ventures <details><summary title="the most suitable">with</summary><span> the most suitable</span></details> individual investors, aka <a href="https://en.wikipedia.org/wiki/Angel_investor" rel="noreferrer noopener" target="_blank" title="Angel investor on Wikipedia">angels</a>.</p>
+                                <p class="_disclosable">Inspired <details><summary title="modeled after, complementary to, and allied with">by</summary><span>, modeled after, comple&shy;mentary to, and <data value="collaborating/partnered">allied</data> with</span></details> leading angel <span><details><summary title="e.g., Band of Angels, Keiretsu Forum">networks</summary><span> (e.g., Band of Angels, Keiretsu Forum)</span></details>,</span> Film <details><summary title="formally launched in 2005 and">Angels</summary><span> formally launched in <details><summary title="at the Silicon Valley Capital Club in downtown San Jose">2005</summary><span> at the Silicon Valley Capital Club in downtown San Jose</span></details> and</span></details> has been discreetly <details><summary title="in Silicon Valley and beyond">active</summary><span> in Silicon Valley and beyond</span></details> for nearly twenty years. Members of our local <details><summary title="in San Francisco, Palo Alto–Mountain View–San Jose, Los Angeles, New York City, and London">chapters</summary><span> in San Francisco, Palo Alto–Mountain View–San Jose, Los Angeles, New York City, and London</span></details> have invested in dozens of productions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Content section 2-->
+            <section id="_way" title="" data-title="The Silicon Valley way">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/02.jpg" alt="Googleplex photo" title="Film Angels brings star power to tech goliath Google's global HQ, aka the Googleplex" /></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <h2 class="display-6 _hinge" title="Funding film the Silicon Valley way"><a class="_no-style" href="#_way">Funding film <span>the Silicon Valley way</span></a></h2>
+                                <p class="_disclosable">Wall Street investment banker–turned–entre&shy;preneur <a href="https://linkedin.com/in/filmfinance" rel="noreferrer noopener" target="_blank" title="Thomas Trenker on LinkedIn">Thomas</a> <details><summary title="a first-generation immigrant from Austria by way of Switzerland">Trenker</summary><span>, a first-generation immigrant from Austria by way of Switzerland,</span></details> founded Film Angels in his <span><details><summary title="after helping found or fund multiple startups">twenties</summary><span> after helping found or fund multiple startups</span></details>.</span> Sand Hill Road venture capitalist <a href="https://linkedin.com/in/saadkhan2" rel="noreferrer noopener" target="_blank" title="Saad Khan on LinkedIn">Saad</a> <details><summary title="of Guy Kawasaki's Garage Technology Ventures">Khan</summary><span> <details><summary title="former Apple chief evangelist">of</summary><span> former Apple chief evangelist</span></details> Guy Kawasaki's Garage Technology Ventures</span></details> joined as his <span><details><summary title="after hearing Thomas speak at Stanford business school's Future of Entertainment conference">cofounder</summary><span> after hearing Thomas speak at Stanford business school's Future of Enter&shy;tainment <details><summary title="where he challenged top studio executives to rationally rethink film finance">conference</summary><span>, where he challenged top studio executives to rationally <details><summary title="and radically redo">rethink</summary><span> and radically redo</span></details> film finance</span></details></span></details>.</span> The founding team also comprises an eclectic group of influential Silicon Valley <span><details><summary title="from diverse backgrounds, among them the late Dr. Frank S. Greene Jr., a true pioneer">profes&shy;sionals</summary><span> from diverse <span><details><summary title="such as early-stage investing, real estate, corporate law, the humanities, software development, and internet startups">backgrounds</summary><span>, such as early-stage investing, real estate, corporate law, the humanities, software development, and internet startups</span></details>.</span> We were fortunate to count among them the late Dr. Frank S. Greene Jr., a true <details><summary title="as a semiconductor engineer, supercomputing entrepreneur, and venture capitalist">pioneer</summary><span> as a semi&shy;conductor <span><details><summary title="inducted into the prestigious Silicon Valley Engineering Hall of Fame in 2001">engineer</summary><span> (inducted into the prestigious Silicon Valley Engineering Hall of Fame in 2001)</span></details>,</span> super&shy;computing entre&shy;preneur, and venture capitalist</span></details></span></details>.</span></p>
+                                <p class="_disclosable">Film Angels has since grown into a go-to resource for <details><summary title="Oscar winners and nominees, Hollywood royalty, industry greats, and rising stars">A-listers</summary><span>, Oscar winners and nominees, Hollywood royalty, industry greats, and rising stars</span></details> looking to fund their independent films or personal <span><details><summary title="outside the confines of the studio system">projects</summary><span> outside the confines of the studio system</span></details>.</span> Typically, they pursue creative freedom and creative <span><details><summary title="a precious commodity in high demand among the world's top filmmakers">control</summary><span>, a precious commodity in high demand among the world's top filmmakers</span></details>.</span></p>
+                                <p class="_disclosable">Statistical analysis reveals $5-10 million budgets as the sweet spot of successful film investment. They allow for first-rate, Academy Award–winning production values without precluding superior risk-adjusted ROIs. <details><summary title="i.e., outcomes benefiting filmmakers and financiers alike, rather than one group alone">Win-wins</summary><span> (i.e., outcomes benefiting filmmakers and financiers alike, rather than one group <span><details><summary title="or one group at the expense of the other">alone</summary><span> or one group at the expense of the other</span></details>)</span></span></details> become not only possible but increas&shy;ingly likely.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Content section 3-->
+            <section id="_boldly" title="" data-title="Boldly go">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6 order-lg-2">
+                            <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/03.jpg" alt="Bottle Shock still" title="&quot;Die Hard&quot; villain Hans Gruber (Alan Rickman) underestimates California wine in &quot;Bottle Shock&quot;" /></div>
+                        </div>
+                        <div class="col-lg-6 order-lg-1">
+                            <div class="p-5">
+                                <h2 class="display-6 _hinge" title="Boldly go where others fear to tread"><a class="_no-style" href="#_boldly"><span>Boldly go</span> where others <span class="_f-fix">f</span>ear to tread</a></h2>
+                                <p class="_disclosable">The venerable Wall Street Journal has written about our success on its blog and in the newspaper's business section. So have other major <span><details><summary title="e.g., San Jose Mercury News, San Francisco Chronicle">publi&shy;cations</summary><span> (e.g., San Jose Mercury News, San Francisco Chronicle)</span></details>.</span></p>
+                                <p class="_disclosable">Film Angels regularly features such luminaries as Apple founder Steve <details><summary title="AOL CEO Barry Schuler, Movielink CEO Jim Ramo, California Film Commissioner Hilary Armstrong, San Francisco Film Commission Executive Director Stefanie Coyote">Wozniak</summary><span>, AOL CEO Barry Schuler, Movielink CEO Jim Ramo, California Film Commissioner Hilary Armstrong, San Francisco Film Commission Executive Director Stefanie Coyote,</span></details> and '90s pop sensation Lance Bass, to name a few. Internet giant Google even made its luxurious <details><summary title="the famed Googleplex in Mountain View">head&shy;quarters</summary><span>, the famed Googleplex in Mountain View,</span></details> available to us exclusively for an unprece&shy;dented pitch <span><details><summary title="headlined by legendary rock icon Carlos Santana and billionaire venture capitalist Tim Draper">extrav&shy;aganza</summary><span> headlined by legendary rock icon Carlos Santana and billionaire venture capitalist Tim Draper</span></details>.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Content section 4-->
+            <section id="_platform" title="" data-title="Unrivaled platform">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/04.jpg" alt="Miss India America still" title="&quot;New Girl&quot; star Hannah Simone shines in Ravi Kapoor's &quot;Miss India America&quot;" /></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <h2 class="display-6 _hinge" title="Unrivaled platorm for the best and brightest"><a class="_no-style" href="#_platform"><span>Unrivaled plat<span class="_f-fix">f</span>orm</span> <span class="_f-fix">f</span>or the best and brightest</a></h2>
+                                <p class="_disclosable">With up to 1,000 potential investors in attendance at a time, Film Angels meetings have served as a powerful platform for the in-person pitches of many famous actors and celebrated <span><details><summary title="including Lori Petty, Sean Astin, David Lynch, Matt Smith, Adrian Grenier, Peter Krause, Danny Glover, David Arquette, Kristin Davis, Frank Darabont, Ajay Naidu, Ron Fricke, Barrie Osborne, Eugene Roddenberry Jr., and Ralph Guggenheim">filmmakers</summary><span>. Past highlights include Lori <span><details><summary title="&quot;League of Their Own,&quot; &quot;Point Break,&quot; &quot;Tank Girl,&quot; &quot;Poker House&quot;">Petty</summary><span> ("League of Their Own," "Point Break," "Tank Girl," "Poker House")</span></details>,</span> Sean <span><details><summary title="&quot;Lord of the Rings,&quot; &quot;Goonies,&quot; &quot;Rudy&quot;">Astin</summary><span> ("Lord of the Rings," "Goonies," "Rudy")</span></details>,</span> David <span><details><summary title="&quot;Twin Peaks,&quot; &quot;Dune,&quot; &quot;Mulholland Dr.&quot;">Lynch</summary><span> ("Twin Peaks," "Dune," "Mulholland Dr.")</span></details>,</span> Matt <span><details><summary title="&quot;Crown,&quot; &quot;Doctor Who,&quot; &quot;House of the Dragon,&quot; &quot;Womb&quot;">Smith</summary><span> ("<data value="tt4786824">Crown</data>," "Doctor Who," "<data value="tt11198330">House of the Dragon</data>," "Womb")</span></details>,</span> Adrian <span><details><summary title="&quot;Entourage,&quot; &quot;Devil Wears Prada&quot;">Grenier</summary><span> ("Entourage," "Devil Wears Prada")</span></details>,</span> Peter <span><details><summary title="&quot;Parenthood,&quot; &quot;Six Feet Under,&quot; &quot;Truman Show&quot;">Krause</summary><span> ("Parenthood," "Six Feet Under," "Truman Show")</span></details>,</span> Danny <span><details><summary title="&quot;Lethal Weapon 1-4,&quot; &quot;Saw,&quot; &quot;Color Purple,&quot; &quot;2012,&quot; &quot;Shooter&quot;">Glover</summary><span> ("Lethal Weapon 1-4," "Saw," "Color Purple," "2012," "Shooter")</span></details>,</span> David <span><details><summary title="&quot;Scream,&quot; &quot;Cougar Town&quot;">Arquette</summary><span> ("Scream," "Cougar Town")</span></details>,</span> Kristin <span><details><summary title="&quot;Sex and the City&quot;">Davis</summary><span> ("Sex and the City")</span></details>,</span> Frank <span><details><summary title="&quot;Shawshank Redemption,&quot; &quot;Walking Dead,&quot; &quot;Green Mile,&quot; &quot;Mist,&quot; &quot;Mary Shelley's Frankenstein&quot;">Darabont</summary><span> ("Shawshank Redemption," "Walking Dead," "Green Mile," "Mist," "Mary Shelley's Franken&shy;stein")</span></details>,</span> Ajay <span><details><summary title="&quot;Office Space,&quot; &quot;Pi,&quot; &quot;Bad Santa&quot;">Naidu</summary><span> ("Office Space," "Pi," "Bad Santa")</span></details>,</span> Ron <span><details><summary title="&quot;Star Wars III,&quot; &quot;Samsara,&quot; &quot;Baraka&quot;">Fricke</summary><span> ("Star Wars III," "Samsara," "Baraka")</span></details>,</span> Barrie <span><details><summary title="&quot;Matrix,&quot; &quot;Lord of the Rings,&quot; &quot;Great Gatsby&quot;">Osborne</summary><span> ("Matrix," "Lord of the Rings," "Great Gatsby")</span></details>,</span> Eugene <span><details><summary title="&quot;Star Trek,&quot; &quot;Earth: Final Conflict&quot;">Roddenberry Jr.</summary><span> ("Star Trek," "Earth: Final Conflict")</span></details>,</span> and Ralph <details><summary title="&quot;Toy Story&quot;">Guggenheim</summary><span> ("Toy Story")</span></details></span></details>.</span></p>
+                                <p class="_disclosable">We uncompro&shy;misingly invite only accredited <details><summary title="with an express interest in movies">investors</summary><span> with an express interest in movies</span></details> to attend these one-of-a-kind private <span><details><summary title="and to participate in thoroughly vetted investment opportunities">events</summary><span> and to participate in thoroughly vetted investment oppor&shy;tunities</span></details>.</span> (Under the federal securities <span><details><summary title="a company that offers or sells its securities must register them with the SEC or find an exemption, such as Rule 506 of Regulation D, whereunder">laws</summary><span>, a company that offers or sells its securities must register the securities with the SEC or find an exemption from the regis&shy;tration require&shy;ments. The federal securities laws provide companies with a number of exemptions. For some of the exemptions, such as Rule 506 of Regulation D</span></details>,</span> a company may sell its securities to what are known as accredited <span><details><summary title="defined in Rule 501 of Regulation D">investors</summary><span>. The term accredited investor is defined in Rule 501 of Regulation D</span></details>.)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <!-- Content topic 2-->
+        <article class="_alternate" id="_partners" title="Partners and sponsors">
+            <header id="">
+                <!-- 
+                <h1>Film Angels partners and sponsors</h1>
+                -->
+            </header>
+            <!-- Content section 5-->
+            <section id="_fintech" title="" data-title="Fintech for film">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6 order-lg-2">
+                            <div class="p-5"><a href="https://getgreenlit.xyz" rel="noreferrer noopener" target="_blank"><img class="img-fluid rounded-circle" src="assets/img/05.jpg" alt="Greenlit logo" title="Film Angels partner Greenlit infuses fintech into Hollywood" /></a></div>
+                        </div>
+                        <div class="col-lg-6 order-lg-1">
+                            <div class="p-5">
+                                <h2 class="display-6 _hinge" title="Partners in fintech"><a class="_no-style" href="#_fintech"><span>Partners</span> in fintech</a></h2>
+                                <p class="_disclosable">We have partnered with <details><summary title="a pioneering fintech startup in the motion picture industry">Greenlit</summary><span>, a pioneering <details><summary title="i.e., financial technology">fintech</summary><span> (i.e., financial technology)</span></details> startup in the motion picture industry,</span></details> to deliver friction&shy;less online workflows for filmmakers and financiers. Greenlit revolu&shy;tionizes film <details><summary title="by simplifying complexities, making it invaluable to those seeking">finance</summary><span> by simplifying complex&shy;ities, making it invaluable to those seeking</span></details> to bring creative visions to life.</p>
+                                <!-- https://stackoverflow.com/questions/50709625/link-with-target-blank-and-rel-noopener-noreferrer-still-vulnerable, https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/ -->
+                                <p class="_disclosable">Greenlit's <a href="https://getgreenlit.xyz" rel="noreferrer noopener" target="_blank" title="Greenlit on the web">innovative technology</a> was born of the challenges the founders, Ian Grant and Bhargav Tarpara, faced producing independent films. <a href="https://github.com/BTruer" rel="noreferrer noopener" target="_blank" title="Bhargav Tarpara on GitHub">Bhargav</a> is an angel <details><summary title="and advisor to startups">investor</summary><span>, advisor to startups,</span></details> and software <span><details><summary title="with eight years of hands-on experience">engineer</summary><span> with eight years of hands-on experience</span></details>,</span> as well as a documentary producer. An <details><summary title="stuntman, producer">actor</summary><span>, stuntman, producer,</span></details> and Minorities in Film cofounder, <a href="https://linkedin.com/in/ianqgrant" rel="noreferrer noopener" target="_blank" title="Ian Grant on LinkedIn">Ian</a> was part of the founding team at Y Combinator–backed unicorn <span><details><summary title="where he scaled sales and operations to over $1 billion in transactions">Squire</summary><span> Tech&shy;nologies, where he scaled sales and operations to over $1 billion in trans&shy;actions</span></details>.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <!-- Content topic 3-->
+        <article id="_producers" title="For producers">
+            <header id="">
+                <!-- 
+                <h1>Film Angels for producers</h1>
+                -->
+            </header>
+            <!-- Content section 6-->
+            <section id="_dreams" title="" data-title="Dreams come true">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/06.jpg" alt="Academy Awards photo" title="Overjoyed producers of &quot;Green Book&quot; (Burke, Wessler, Vallelonga) brandish their Oscar statuettes" /></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <!-- <span class="_f-fix">f</span> -->
+                                <!-- <span>Producer/Filmmaker</span> dreams come true -->
+                                <h2 class="display-6 _hinge" title="Dreams come true for producers"><a class="_no-style" href="#_dreams"><span>Dreams come true</span> <span class="_f-fix">f</span>or producers</a></h2>
+                                <p><span><details><summary title="Too long; didn't read">TL;DR</summary><span> (Too long; didn't read)</span></details>:</span> Many roads lead to Film Angels. Producers <a href="#" title="Application form for producers (powered by Greenlit)" data-bs-toggle="modal" data-bs-target="#elevatorModal">start here</a>.</p>
+                                <p class="_disclosable">Our angels, managers, and liaisons meet <details><summary title="with bankable projects">producers</summary><span> with bankable <details><summary title="slash productions">projects</summary><span>/&shy;productions</span></details></span></details> on a wide variety of <details><summary title="e.g., at industry events">occasions</summary><span> (e.g., at industry events)</span></details> around the <span><details><summary title="such as the AFM, Sundance, and Cannes">globe</summary><span>, such as the <span><details><summary title="American Film Market">AFM</summary><span> (American Film Market)</span></details>,</span> Sundance, and Cannes</span></details>.</span> Regardless of <details><summary title="where, and when">how</summary><span>, where, and when</span></details> we connect, you will eventually be asked to complete our short application <span><details><summary title="figuratively named the Elevator Pitch">form</summary><span>, figura&shy;tively named the Elevator <details><summary title="after a common sport among founders in Silicon">Pitch</summary><span> after a common sport among founders in Silicon <details><summary title="regaling potential investors with a fundraising pitch in what little time it takes to ride an elevator together">Valley</summary><span>: regaling potential investors with <details><summary title="parsimoniously compact yet fantastically effective">a</summary><span> parsimo&shy;niously compact yet fantas&shy;tically effective</span></details> fundraising pitch in what little time it takes to ride an <details><summary title="to uncertain heights or depths">elevator</summary><span> to uncertain heights or depths</span></details> together</span></details></span></details></span></details>.</span> You might as well square it away now:</p>
+                                <p>
+                                    <!-- Button trigger modal (coloring needs work) -->
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-warning" title="Application form for producers (powered by Greenlit)" data-bs-toggle="modal" data-bs-target="#elevatorModal">
+                                            Pitch your production
+                                        </button>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="elevatorModal" tabindex="-1" aria-labelledby="elevatorModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="elevatorModalLabel">Modal title</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div data-tf-live="01HJKYFN2XCVA22ZGTG4A44VF7"></div>
+                                                    <script src="https://embed.typeform.com/next/embed.js"></script>
+                                                </div>
+                                                <!-- 
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                                -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Content section 7-->
+            <section id="_unfair" title="" data-title="Unfair advantage">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6 order-lg-2">
+                            <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/07.jpg" alt="Suicide Squad still" title="Not your usual elevator pitch: Margot Robbie performs her own stunts in &quot;Suicide Squad&quot;" /></div>
+                        </div>
+                        <div class="col-lg-6 order-lg-1">
+                            <div class="p-5">
+                                <h2 class="display-6 _hinge" title="Capitalize on your unfair advantage"><a class="_no-style" href="#_unfair">Capitalize on your <span>un<span class="_f-fix">f</span>air advantage</span></a></h2>
+                                <p class="_disclosable">Starting <details><summary title="our online application form, aka">with</summary><span> our online application form, aka</span></details> the <a href="#" title="Application form for producers (powered by Greenlit)" data-bs-toggle="modal" data-bs-target="#elevatorModal">Elevator Pitch</a>, its compactness, and its emphasis on unfair <span><details><summary title="i.e., your project's secret sauce">advantage</summary><span> (i.e., your project's <details><summary title="or special">secret</summary><span> or special</span></details> <a href="https://www.merriam-webster.com/wordplay/words-were-watching-secret-sauce" rel="noreferrer noopener" target="_blank" title="Secret sauce at Merriam-Webster">sauce</a>)</span></details>,</span> the Film Angels process may <details><summary title="unfamiliar or perhaps">seem</summary><span> unfamiliar or perhaps</span></details> <span><details><summary title="vis-à-vis entrenched Hollywood practices">uncon&shy;ventional</summary><span> vis-à-vis entrenched Hollywood practices</span></details>.</span> Some dub it <span><details><summary title="to invoke an overused techno-economic buzzword">disruptive</summary><span>, to invoke an overused techno-economic buzzword</span></details>.</span> We call it the Silicon Valley <span><details><summary title="of funding independent film">way</summary><span> of funding independent film</span></details>.</span> Rest easy, we do not expect your application to be <span><details><summary title="by any standard, much less so from the get-go">perfect</summary><span> by any standard, much less so from the get-go</span></details>.</span> Indeed, we encourage you to <details><summary title="revise, update, and elaborate on">share</summary><span>, revise, update, and elaborate on</span></details> project details <span><details><summary title="at your discretion">incre&shy;mentally</summary><span> at your discretion</span></details>.</span></p>
+                                <p class="_disclosable">Film Angels is committed to supporting <details><summary title="and your production">you</summary><span> and your production</span></details> every step of the way. We will do <details><summary title="in our purview and power">all</summary><span> in our purview and power</span></details> to ensure that you and our members succeed <span><details><summary title="true to the win-win maxim at the heart of Film Angels' philosophy">together</summary><span>, true to the win-win maxim at the heart of Film Angels' philosophy</span></details>.</span></p>
+                                <p class="_disclosable">We love working with producers. And producers like our style, <span><details><summary title="we have been told">too</summary><span>, we have been told</span></details>.</span> We make producer <details><summary title="of producing movies on your own terms">dreams</summary><span> of producing movies on your own terms</span></details> come true.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <!-- Content topic 4-->
+        <!-- Trusted by…-->
+        <!-- Footer-->
+        <footer class="py-5 bg-black">
+            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Film Angels LLC 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
